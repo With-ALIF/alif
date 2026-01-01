@@ -40,6 +40,13 @@ Promise.all([
     `<a href="${n.link}">${n.label}</a>`
   ).join("")
 
+  const menuBtn = document.getElementById("menuBtn");
+
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+
   heroSubtitle.textContent = hero.subtitle
   heroTitle.innerHTML = `
     <span>${hero.title.line1}</span>
@@ -73,8 +80,7 @@ Promise.all([
   ).join("")
 
   education.innerHTML = `
-    <p class="section-label">Education</p>
-    <h2 class="section-title">
+     <h2 class="section-title">
       Academic <span class="text-gradient">Background</span>
     </h2>
 
@@ -89,23 +95,38 @@ Promise.all([
     </div>
   `
 
-  projectHeader.innerHTML = `
-     <h2 class="section-title">${projectsData.title}</h2>
-  `
+projectHeader.innerHTML = `
+  <h2 class="section-title">${projectsData.title}</h2>
+`;
 
-  projectsContainer.innerHTML = `
-    <div class="projects-grid">
-      ${projectsData.items.map(p => `
-        <div class="project-card">
+projectsContainer.innerHTML = `
+  <div class="projects-grid">
+    ${projectsData.items.map(p => `
+      <div class="project-card">
+
+        <div class="project-image">
+          <img src="${p.image}" alt="${p.title}">
+        </div>
+
+        <div class="project-body">
           <h3 class="project-title">${p.title}</h3>
           <p class="project-description">${p.description}</p>
+
           <div class="project-tags">
             ${p.tags.map(t => `<span class="project-tag">${t}</span>`).join("")}
           </div>
+
+          <div class="project-actions">
+            <a href="${p.github}" class="btn-project">GitHub</a>
+            <a href="${p.demo}" class="btn-project primary">Live Demo</a>
+          </div>
         </div>
-      `).join("")}
-    </div>
-  `
+
+      </div>
+    `).join("")}
+  </div>
+`;
+
 
   skillsHeader.innerHTML = `
     <p class="section-label">${skillsData.label}</p>

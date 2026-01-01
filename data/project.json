@@ -1,16 +1,22 @@
 {
- 
   "title": "Featured <span class='text-gradient'>Projects</span>",
   "items": [
     {
       "title": "Portfolio Website",
       "description": "A modern responsive portfolio built with clean UI and animations.",
-      "tags": ["HTML", "CSS", "JavaScript"]
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "image": "https://github.com/With-ALIF/logo_zone/blob/main/alif/alif.jpg?raw=true",
+      "github": "#",
+      "demo": "#"
     },
     {
       "title": "E-commerce Platform",
       "description": "Full-stack e-commerce application with authentication and payments.",
-      "tags": ["React", "Node.js", "MongoDB"]
+      "tags": ["React", "Node.js", "MongoDB"],
+      "image": "https://github.com/With-ALIF/logo_zone/blob/main/alif/alif.jpg?raw=true",
+      "github": "#",
+      "demo": "#"
     }
   ]
 }
+

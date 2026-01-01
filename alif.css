@@ -1,3 +1,5 @@
+/* ================= ROOT ================= */
+
 :root {
   --bg: hsl(20,14%,4%);
   --fg: hsl(40,20%,95%);
@@ -11,7 +13,7 @@
   --font-serif: 'Playfair Display', Georgia, serif;
 }
 
-/* ============== RESET ============== */
+/* ================= RESET ================= */
 
 *,
 *::before,
@@ -19,8 +21,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 html, body {
@@ -46,7 +46,7 @@ a {
   text-decoration: none;
 }
 
-/* ============== CONTAINER ============== */
+/* ================= CONTAINER ================= */
 
 .container {
   max-width: 1200px;
@@ -55,19 +55,17 @@ a {
   padding: 0 1.25rem;
 }
 
-/* ============== GRADIENT TEXT ============== */
+/* ================= GRADIENT TEXT ================= */
 
 .text-gradient {
-  display: inline-block;
-  max-width: 100%;
-  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  background: linear-gradient(90deg,#ff6a00,#ee0979);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
-/* ============== HEADER ============== */
+/* ================= HEADER ================= */
 
 .header {
   position: fixed;
@@ -95,77 +93,69 @@ a {
   color: var(--primary);
 }
 
-.nav-desktop {
-  display: flex;
-  gap: 2rem;
-}
+/* ================= NAV TOGGLE ================= */
 
-.nav-desktop a {
-  font-size: .875rem;
-  color: var(--muted);
-}
-
-.nav-desktop a:hover {
+#menuBtn {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
   color: var(--fg);
+  cursor: pointer;
 }
 
-/* ============== BUTTONS ============== */
+@media (max-width:768px) {
+  #menuBtn { display: block; }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: .9rem 2rem;
-  border-radius: 999px;
-  font-size: .875rem;
-  transition: .3s;
-  white-space: nowrap;
+  #nav {
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+  }
+
+  #nav.active { display: flex; }
+
+  #nav a {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
 }
 
-.btn-primary {
-  background: var(--primary);
-  color: #000;
-}
+/* ================= HERO ================= */
 
-.btn-primary:hover {
-  box-shadow: 0 0 30px hsla(38,92%,50%,.4);
-}
-
-.btn-outline {
-  border: 1px solid var(--border);
-}
-
-.btn-outline:hover {
-  background: var(--card);
-}
-
-/* ============== HERO ============== */
+main { padding-top: 5rem; }
 
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 5rem);
   display: flex;
   align-items: center;
-  padding-top: 8rem;
+  padding-top: 4rem;
 }
 
 .hero-subtitle {
-  letter-spacing: .3em;
   font-size: .75rem;
+  letter-spacing: .3em;
   color: var(--muted);
-  margin-bottom: 1rem;
+  margin-bottom: .75rem;
 }
 
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(2.6rem,6vw,4.5rem);
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero-description {
   max-width: 520px;
   color: var(--muted);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .hero-buttons {
@@ -174,33 +164,31 @@ a {
   flex-wrap: wrap;
 }
 
-/* ============== SECTIONS ============== */
-main {
-  padding-top: 5rem;
-}
-
-.hero {
-  min-height: calc(100vh - 5rem);
-}
+/* ================= SECTIONS (FIXED GAP) ================= */
 
 section {
-  padding: 6rem 0;
+  padding: 4rem 0;
   scroll-margin-top: 6rem;
 }
 
+@media (max-width:768px) {
+  section { padding: 2.5rem 0; }
+}
+
 .section-label {
-  color: var(--primary);
   font-size: .75rem;
   letter-spacing: .3em;
-  margin-bottom: .75rem;
+  color: var(--primary);
+  margin-bottom: .5rem;
 }
 
 .section-title {
   font-family: var(--font-serif);
   font-size: clamp(2rem,5vw,3rem);
+  margin-bottom: 1.5rem;
 }
 
-/* ============== ABOUT ============== */
+/* ================= ABOUT ================= */
 
 .about-grid {
   display: grid;
@@ -214,24 +202,37 @@ section {
   }
 }
 
+/* stats goes below on tablet/mobile */
+@media (max-width:1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  #stats {
+    margin-top: 1.5rem;
+  }
+}
+
 .about-text {
   color: var(--muted);
   margin-top: 1rem;
 }
 
-/* ============== STATS ============== */
+/* ================= STATS ================= */
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(0,1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .stat-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 1rem;
+  margin-bottom: 2rem;
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,.25);
@@ -248,18 +249,17 @@ section {
 }
 
 .stat-label {
-  color: var(--muted);
   font-size: .75rem;
+  color: var(--muted);
 }
 
-/* ============== TECHNOLOGIES ============== */
+/* ================= TECHNOLOGIES ================= */
 
 .tech-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
 .tech-tags {
@@ -277,125 +277,36 @@ section {
   font-size: .875rem;
 }
 
-/* ============== PROJECTS ============== */
+/* ================= PROJECTS ================= */
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
   gap: 2rem;
 }
 
-.project-card {
-  background: linear-gradient(180deg,hsl(20,14%,9%),hsl(20,14%,6%));
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-}
-
-.project-title {
-  font-family: var(--font-serif);
-  margin-bottom: .5rem;
-}
-
-.project-description {
-  color: var(--muted);
-  font-size: .875rem;
-  margin-bottom: 1rem;
-}
-
-.project-tags {
-  display: flex;
-  gap: .5rem;
-  flex-wrap: wrap;
-}
-
-.project-tag {
-  font-size: .7rem;
-  padding: .25rem .75rem;
-  border-radius: 999px;
-  background: hsl(20,10%,15%);
-}
-
-/* ============== SKILLS ============== */
- /* ===== SKILLS (Desktop default) ===== */
+/* ================= SKILLS ================= */
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(0,1fr));
   gap: 1.5rem;
 }
 
-/* ===== SKILLS (Mobile horizontal scroll) ===== */
-
-@media (max-width: 767px) {
+@media (max-width:767px) {
   .skills-grid {
     display: flex;
-    gap: 1rem;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 1rem;
+    gap: 1rem;
   }
 
   .skill-card {
     min-width: 260px;
     flex-shrink: 0;
-    scroll-snap-align: start;
-  }
-
-  .skills-grid::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  .skills-grid::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 999px;
   }
 }
 
-.skill-card {
-  position: relative;
-  background: radial-gradient(
-      120% 120% at top left,
-      rgba(255,255,255,0.08),
-      rgba(0,0,0,0.95)
-    ),
-    linear-gradient(180deg, #0b0b0b, #050505);
-
-  border-radius: 1.5rem;
-  padding: 2.5rem;
-  border: 1px solid rgba(255,255,255,0.08);
-  overflow: hidden;
-
-  transition: transform .4s ease, box-shadow .4s ease;
-}
-
-/* soft glow edge */
-.skill-card::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(
-    135deg,
-    rgba(255,180,80,.25),
-    transparent 60%
-  );
-  opacity: .6;
-  pointer-events: none;
-}
-
-/* hover lift (desktop) */
-@media (hover: hover) {
-  .skill-card:hover {
-    transform: translateY(-6px);
-    box-shadow:
-      0 20px 60px rgba(0,0,0,.8),
-      inset 0 0 0 1px rgba(255,255,255,.05);
-  }
-}
-
-/* ============== EDUCATION ============== */
+/* ================= EDUCATION ================= */
 
 .education-grid {
   display: grid;
@@ -404,7 +315,7 @@ section {
 
 @media (min-width:768px) {
   .education-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -413,46 +324,9 @@ section {
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
-/* ============== CONTACT ============== */
-
-.contact-grid {
-  display: grid;
-  gap: 4rem;
-}
-
-@media (min-width:1024px) {
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.contact-form-wrapper {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  padding: 2rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: .8rem 1rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: .75rem;
-  color: var(--fg);
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-}
-
-/* ============== FOOTER ============== */
+/* ================= FOOTER ================= */
 
 .footer {
   border-top: 1px solid var(--border);
@@ -478,6 +352,75 @@ textarea:focus {
   color: var(--muted);
 }
 
-.footer .logo {
-  font-size: 1.25rem;
+/* ===== Desktop Hero Gap Fix ===== */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: auto;      /* full height force বাদ */
+    padding-top: 6rem;     /* header + balance */
+    padding-bottom: 4rem; /* নিচের gap কম */
+  }
+}
+
+/* ===== Desktop Nav Style ===== */
+#nav {
+  display: flex;
+  gap: 2rem;
+}
+
+#nav a {
+  font-size: .9rem;
+  color: var(--muted);
+  position: relative;
+  transition: color .3s ease;
+}
+
+#nav a:hover {
+  color: var(--fg);
+}
+
+/* underline hover effect */
+#nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width .3s ease;
+}
+
+#nav a:hover::after {
+  width: 100%;
+}
+@media (max-width: 768px) {
+
+  #nav {
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+
+    width: 85vw;          /*  width control */
+    max-width: 320px;     /*  desktop-like feel */
+
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+  }
+
+  #nav.active {
+    display: flex;
+  }
+
+  #nav a {
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
 }
