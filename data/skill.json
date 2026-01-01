@@ -1,0 +1,26 @@
+{
+  "label": "Expertise",
+  "title": "What I <span class='text-gradient'>Bring</span>",
+  "items": [
+    {
+      "title": "Frontend Development",
+      "description": "Building responsive and accessible UI.",
+      "points": ["HTML", "CSS", "JavaScript", "React"]
+    },
+    {
+      "title": "Backend Development",
+      "description": "Developing secure and scalable APIs.",
+      "points": ["Node.js", "Express", "MongoDB"]
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "Designing intuitive user experiences.",
+      "points": ["Figma", "Wireframing", "Prototyping"]
+    },
+    {
+      "title": "Performance & SEO",
+      "description": "Optimizing speed and search visibility.",
+      "points": ["Optimization", "Accessibility", "SEO"]
+    }
+  ]
+}

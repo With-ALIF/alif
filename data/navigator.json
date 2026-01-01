@@ -1,0 +1,7 @@
+[
+  { "label": "About", "link": "#about" },
+  { "label": "Education", "link": "#education" },
+  { "label": "Projects", "link": "#projects" },
+  { "label": "Skills", "link": "#skills" },
+  { "label": "Contact", "link": "#contact" }
+]

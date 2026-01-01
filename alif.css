@@ -11,15 +11,23 @@
   --font-serif: 'Playfair Display', Georgia, serif;
 }
 
+/* ============== RESET ============== */
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-html { scroll-behavior: smooth; }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-sans);
@@ -28,22 +36,38 @@ body {
   line-height: 1.7;
 }
 
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============== CONTAINER ============== */
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: auto;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
 }
 
+/* ============== GRADIENT TEXT ============== */
+
 .text-gradient {
-  background: var(--gradient);
+  display: inline-block;
+  max-width: 100%;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
-/* ================= HEADER ================= */
+/* ============== HEADER ============== */
 
 .header {
   position: fixed;
@@ -67,7 +91,9 @@ a { color: inherit; text-decoration: none; }
   font-size: 1.5rem;
 }
 
-.logo span { color: var(--primary); }
+.logo span {
+  color: var(--primary);
+}
 
 .nav-desktop {
   display: flex;
@@ -79,9 +105,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
-.nav-desktop a:hover { color: var(--fg); }
+.nav-desktop a:hover {
+  color: var(--fg);
+}
 
-/* ================= BUTTONS ================= */
+/* ============== BUTTONS ============== */
 
 .btn {
   display: inline-flex;
@@ -91,6 +119,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 999px;
   font-size: .875rem;
   transition: .3s;
+  white-space: nowrap;
 }
 
 .btn-primary {
@@ -110,7 +139,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--card);
 }
 
-/* ================= HERO ================= */
+/* ============== HERO ============== */
 
 .hero {
   min-height: 100vh;
@@ -128,7 +157,7 @@ a { color: inherit; text-decoration: none; }
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.8rem,6vw,4.5rem);
+  font-size: clamp(2.6rem,6vw,4.5rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
@@ -145,7 +174,14 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
-/* ================= SECTIONS ================= */
+/* ============== SECTIONS ============== */
+main {
+  padding-top: 5rem;
+}
+
+.hero {
+  min-height: calc(100vh - 5rem);
+}
 
 section {
   padding: 6rem 0;
@@ -164,14 +200,14 @@ section {
   font-size: clamp(2rem,5vw,3rem);
 }
 
-/* ================= ABOUT ================= */
+/* ============== ABOUT ============== */
 
 .about-grid {
   display: grid;
   gap: 4rem;
 }
 
-@media(min-width:1024px){
+@media (min-width:1024px) {
   .about-grid {
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -183,11 +219,11 @@ section {
   margin-top: 1rem;
 }
 
-/* ================= STATS ================= */
+/* ============== STATS ============== */
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -198,13 +234,16 @@ section {
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
 .stat-number {
   font-family: var(--font-serif);
   font-size: 2rem;
   background: var(--gradient);
+  background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
@@ -213,13 +252,14 @@ section {
   font-size: .75rem;
 }
 
-/* ================= TECHNOLOGIES ================= */
+/* ============== TECHNOLOGIES ============== */
 
 .tech-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
 .tech-tags {
@@ -237,17 +277,12 @@ section {
   font-size: .875rem;
 }
 
-/* ================= PROJECTS ================= */
+/* ============== PROJECTS ============== */
 
 .projects-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 2rem;
-}
-
-@media(min-width:768px){
-  .projects-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
 }
 
 .project-card {
@@ -255,6 +290,7 @@ section {
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
 .project-title {
@@ -281,18 +317,12 @@ section {
   background: hsl(20,10%,15%);
 }
 
-/* ================= SKILLS ================= */
+/* ============== SKILLS ============== */
 
 .skills-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 1.5rem;
-}
-
-@media(min-width:768px){
-  .skills-grid { grid-template-columns: repeat(2,1fr); }
-}
-@media(min-width:1024px){
-  .skills-grid { grid-template-columns: repeat(4,1fr); }
 }
 
 .skill-card {
@@ -300,6 +330,7 @@ section {
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
 .skill-title {
@@ -318,14 +349,35 @@ section {
   color: var(--muted);
 }
 
-/* ================= CONTACT ================= */
+/* ============== EDUCATION ============== */
+
+.education-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width:768px) {
+  .education-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.education-grid .card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* ============== CONTACT ============== */
 
 .contact-grid {
   display: grid;
   gap: 4rem;
 }
 
-@media(min-width:1024px){
+@media (min-width:1024px) {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -354,7 +406,7 @@ textarea:focus {
   border-color: var(--primary);
 }
 
-/* ================= FOOTER ================= */
+/* ============== FOOTER ============== */
 
 .footer {
   border-top: 1px solid var(--border);
@@ -368,7 +420,7 @@ textarea:focus {
   text-align: center;
 }
 
-@media(min-width:768px){
+@media (min-width:768px) {
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
@@ -378,4 +430,8 @@ textarea:focus {
 .footer-text {
   font-size: .875rem;
   color: var(--muted);
+}
+
+.footer .logo {
+  font-size: 1.25rem;
 }

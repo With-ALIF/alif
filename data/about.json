@@ -1,4 +1,8 @@
 {
-    "title": "About Me",
-    "text": "I am a creative developer"
+  "label": "About Me",
+  "title": "Passionate about creating <span class='text-gradient'>impactful</span> solutions",
+  "paragraphs": [
+    "I am a creative web developer focused on building elegant and performant digital experiences.",
+    "With a strong foundation in design and development, I bridge the gap between aesthetics and functionality."
+  ]
 }

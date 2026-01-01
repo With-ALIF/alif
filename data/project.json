@@ -1,0 +1,16 @@
+{
+  "label": "Selected Work",
+  "title": "Featured <span class='text-gradient'>Projects</span>",
+  "items": [
+    {
+      "title": "Portfolio Website",
+      "description": "A modern responsive portfolio built with clean UI and animations.",
+      "tags": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "title": "E-commerce Platform",
+      "description": "Full-stack e-commerce application with authentication and payments.",
+      "tags": ["React", "Node.js", "MongoDB"]
+    }
+  ]
+}
