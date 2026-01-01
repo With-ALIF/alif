@@ -6,7 +6,7 @@
   },
   "description": "I design and build modern, scalable and user-focused digital products.",
   "buttons": [
-    { "text": "View Projects", "link": "#projects", "style": "primary" },
+    { "text": "View Projects", "link": "#projects-section", "style": "primary" },
     { "text": "Contact Me", "link": "#contact", "style": "outline" }
   ]
 }

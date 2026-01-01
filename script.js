@@ -1,5 +1,8 @@
 const loadJSON = path => fetch(path).then(r => r.json())
 
+const projectsContainer = document.getElementById("projectsContainer")
+const skillsContainer = document.getElementById("skillsContainer")
+
 Promise.all([
   loadJSON("data/meta.json"),
   loadJSON("data/logo.json"),
@@ -38,7 +41,10 @@ Promise.all([
   ).join("")
 
   heroSubtitle.textContent = hero.subtitle
-  heroTitle.innerHTML = `<span>${hero.title.line1}</span> <span class="text-gradient">${hero.title.line2}</span>`
+  heroTitle.innerHTML = `
+    <span>${hero.title.line1}</span>
+    <span class="text-gradient">${hero.title.line2}</span>
+  `
   heroDesc.textContent = hero.description
   heroBtns.innerHTML = hero.buttons.map(b =>
     `<a href="${b.link}" class="btn btn-${b.style}">${b.text}</a>`
@@ -67,26 +73,29 @@ Promise.all([
   ).join("")
 
   education.innerHTML = `
+    <p class="section-label">Education</p>
+    <h2 class="section-title">
+      Academic <span class="text-gradient">Background</span>
+    </h2>
+
     <div class="education-grid">
       ${educationData.map(e => `
         <div class="card">
           <h3>${e.degree}</h3>
-          <p>${e.institution}</p>
+          <p>${e.institute}</p>
           <small>${e.year}</small>
-          <p>${e.description}</p>
         </div>
       `).join("")}
     </div>
   `
 
   projectHeader.innerHTML = `
-    <p class="section-label">Projects</p>
-    <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+     <h2 class="section-title">${projectsData.title}</h2>
   `
 
-  projects.innerHTML = `
+  projectsContainer.innerHTML = `
     <div class="projects-grid">
-      ${projectsData.map(p => `
+      ${projectsData.items.map(p => `
         <div class="project-card">
           <h3 class="project-title">${p.title}</h3>
           <p class="project-description">${p.description}</p>
@@ -99,13 +108,13 @@ Promise.all([
   `
 
   skillsHeader.innerHTML = `
-    <p class="section-label">Skills</p>
-    <h2 class="section-title">What I <span class="text-gradient">Do</span></h2>
+    <p class="section-label">${skillsData.label}</p>
+    <h2 class="section-title">${skillsData.title}</h2>
   `
 
-  skills.innerHTML = `
+  skillsContainer.innerHTML = `
     <div class="skills-grid">
-      ${skillsData.map(s => `
+      ${skillsData.items.map(s => `
         <div class="skill-card">
           <h3 class="skill-title">${s.title}</h3>
           <p class="skill-description">${s.description}</p>
@@ -125,8 +134,9 @@ Promise.all([
     <p>Location: ${contactData.details.location}</p>
   `
 
-  footer.innerHTML = `
-    <div class="logo">${logoData.html}</div>
-    <p class="footer-text">${footerData.text}</p>
-  `
+footer.innerHTML = `
+  <div class="logo">${logoData.html}</div>
+  <p class="footer-text">${footerData.text || ""}</p>
+`
+
 }).catch(console.error)

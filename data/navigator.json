@@ -1,7 +1,7 @@
 [
   { "label": "About", "link": "#about" },
-  { "label": "Education", "link": "#education" },
-  { "label": "Projects", "link": "#projects" },
-  { "label": "Skills", "link": "#skills" },
-  { "label": "Contact", "link": "#contact" }
+  { "label": "Education", "link": "#education-section" },
+  { "label": "Projects", "link": "#projects-section" },
+  { "label": "Skills", "link": "#skills-section" },
+  { "label": "Contact", "link": "#contact-section" }
 ]
