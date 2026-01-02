@@ -3,9 +3,8 @@
 }
 
 .section-title {
-  font-size: clamp(2.6rem, 6vw, 3.8rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
 }
-
 
 @media (min-width: 768px) {
 

@@ -25,8 +25,8 @@
 }
 
 .review-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: hsl(40, 20%, 95%);
 }
 
@@ -76,38 +76,37 @@
   font-weight: 600;
   color: hsl(40, 20%, 95%);
 }
+@media (max-width: 768px) {
+  .review-label {
+    font-size: clamp(26px, 8vw, 36px);
+    letter-spacing: 1.5px;
+    line-height: 1.25;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+  }
 
- @media (max-width: 768px) {
   #review-section {
     padding: 48px 16px;
   }
 
-  .review-header {
-    margin-bottom: 1.6rem;
-  }
-
   .review-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .review-inner {
-    padding: 1rem 0.95rem;
+    padding: 1rem 1rem;
   }
 
   .review-quote {
-    font-size: 44px;
+    font-size: 42px;
   }
 
   .review-text {
     font-size: 18px;
   }
 
-  .review-author img {
-    width: 72px;
-    height: 72px;
-  }
-
   .review-author h4 {
-    font-size: 18px;
+    font-size: 1rem;
   }
 }
