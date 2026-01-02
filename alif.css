@@ -39,8 +39,7 @@ a {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 1.25rem;
-}
+ }
 
 /* =========================================================
    UTILITIES
@@ -165,7 +164,7 @@ a {
 ========================================================= */
 
 main {
-  padding-top: 5rem;
+  padding-top: 0rem;
 }
 
 /* ================= HERO ================= */
@@ -368,172 +367,7 @@ main {
   }
 }
 
-/* =========================================================
-   STATS
-========================================================= */
-
-#stats {
-  margin-top: 3rem;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-}
-
-/* Stat Card */
-.stat-card {
-  background: radial-gradient(
-      circle at top,
-      rgba(255, 255, 255, 0.08),
-      transparent 60%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.04),
-      rgba(0, 0, 0, 0.7)
-    );
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 2rem;
-  padding: 3rem 2rem;
-  text-align: center;
-  box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 40px 80px rgba(0, 0, 0, 0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
-}
-
-/* Number */
-.stat-number {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  color: hsl(38, 92%, 55%);
-}
-
-/* Label */
-.stat-label {
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: hsl(40, 10%, 65%);
-}
-
-/* Mobile – horizontal scroll */
-@media (max-width: 767px) {
-  .stats-grid {
-    display: flex;
-    gap: 1.25rem;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-    scroll-snap-type: x mandatory;
-  }
-
-  .stat-card {
-    min-width: 80%;
-    flex-shrink: 0;
-    scroll-snap-align: center;
-  }
-}
-
-/* =========================================================
-   EDUCATION – FORCE CARD STYLE (FINAL FIX)
-========================================================= */
-
-.education-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2.5rem;
-}
-
-.education-card {
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.08),
-    rgba(0,0,0,0.7)
-  ) !important;
-
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 2rem;
-  padding: 2.5rem 2rem;
-}
-
-.education-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.education-logo {
-  width: 56px;
-  height: 56px;
-  border-radius: 1rem;
-  background: rgba(255,255,255,0.1);
-  object-fit: contain;
-}
-
-.education-degree {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.education-institute {
-  color: #ffb703;
-  margin-top: 0.2rem;
-}
-
-.education-meta {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-
-.education-class,
-.education-year {
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  background: rgba(255,183,3,0.1);
-  border: 1px solid rgba(255,183,3,0.35);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #ffb703;
-}
-
-.education-description {
-  margin-top: 1rem;
-  color: hsl(40,10%,70%);
-}
-
-/* MOBILE */
-@media (max-width: 767px) {
-  .education-grid {
-    display: flex !important;
-    overflow-x: auto;
-    gap: 1.25rem;
-  }
-
-  .education-card {
-    min-width: 85%;
-    flex-shrink: 0;
-    text-align: center;
-  }
-
-  .education-header {
-    flex-direction: column;
-  }
-}
-
  
-
 
 /* =========================================================
    PROJECTS
