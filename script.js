@@ -10,8 +10,13 @@ Promise.all([
   loadJSON("data/hero.json"),
   loadJSON("data/about.json"),
   loadJSON("data/stats.json"),
+<<<<<<< HEAD
   loadJSON("data/education.json"),
   loadJSON("data/experience.json"),
+=======
+  loadJSON("data/technologies.json"),
+  loadJSON("data/education.json"),
+>>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd
   loadJSON("data/project.json"),
   loadJSON("data/skill.json"),
   loadJSON("data/contact.json"),
@@ -23,8 +28,13 @@ Promise.all([
   hero,
   about,
   statsData,
+<<<<<<< HEAD
   educationData,
   experienceData,
+=======
+  technologies,
+  educationData,
+>>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd
   projectsData,
   skillsData,
   contactData,
@@ -45,6 +55,7 @@ Promise.all([
 menuBtn.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
+<<<<<<< HEAD
 /* ================= HERO ================= */
 
 heroSubtitle.textContent = hero.subtitle;
@@ -97,6 +108,25 @@ aboutContent.innerHTML = `
 `;
 
 
+=======
+
+
+  heroSubtitle.textContent = hero.subtitle
+  heroTitle.innerHTML = `
+    <span>${hero.title.line1}</span>
+    <span class="text-gradient">${hero.title.line2}</span>
+  `
+  heroDesc.textContent = hero.description
+  heroBtns.innerHTML = hero.buttons.map(b =>
+    `<a href="${b.link}" class="btn btn-${b.style}">${b.text}</a>`
+  ).join("")
+
+  aboutContent.innerHTML = `
+    <p class="section-label">${about.label}</p>
+    <h2 class="section-title">${about.title}</h2>
+    ${about.paragraphs.map(p => `<p class="about-text">${p}</p>`).join("")}
+  `
+>>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd
 
   stats.innerHTML = `
     <div class="stats-grid">
@@ -108,6 +138,7 @@ aboutContent.innerHTML = `
       `).join("")}
     </div>
   `
+<<<<<<< HEAD
   education.innerHTML = `
   <h2 class="section-title">
     Academic <span class="text-gradient">Background</span>
@@ -166,6 +197,29 @@ experienceContainer.innerHTML = `
   </div>
 `;
 
+=======
+
+  techTitle.textContent = technologies.label
+  techTags.innerHTML = technologies.items.map(t =>
+    `<span class="tech-tag">${t}</span>`
+  ).join("")
+
+  education.innerHTML = `
+     <h2 class="section-title">
+      Academic <span class="text-gradient">Background</span>
+    </h2>
+
+    <div class="education-grid">
+      ${educationData.map(e => `
+        <div class="card">
+          <h3>${e.degree}</h3>
+          <p>${e.institute}</p>
+          <small>${e.year}</small>
+        </div>
+      `).join("")}
+    </div>
+  `
+>>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd
 
 projectHeader.innerHTML = `
   <h2 class="section-title">${projectsData.title}</h2>
@@ -189,6 +243,7 @@ projectsContainer.innerHTML = `
           </div>
 
           <div class="project-actions">
+<<<<<<< HEAD
 
             <a href="${p.github}" class="btn-project btn-github" target="_blank" aria-label="GitHub">
               <svg class="github-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -201,6 +256,10 @@ projectsContainer.innerHTML = `
               Live Demo
             </a>
 
+=======
+            <a href="${p.github}" class="btn-project">GitHub</a>
+            <a href="${p.demo}" class="btn-project primary">Live Demo</a>
+>>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd
           </div>
         </div>
 
@@ -210,7 +269,10 @@ projectsContainer.innerHTML = `
 `;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd
   skillsHeader.innerHTML = `
     <p class="section-label">${skillsData.label}</p>
     <h2 class="section-title">${skillsData.title}</h2>

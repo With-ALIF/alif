@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
   {
     "logo": "https://github.com/With-ALIF/logo_zone/blob/main/education/brur_optimized.png?raw=true",
     "degree": "B.Sc in Computer Science",
@@ -55,3 +56,16 @@
   }
   
 ]
+=======
+    {
+        "degree": "B.Sc in Computer Science",
+        "institute": "Begum Rokeya University, Rangpur",
+        "year": "2023 - Studying"
+    },
+    {
+        "degree": "Higher Secondary Certificate",
+        "institute": "Milestone College, Dhaka",
+        "year": "2021 - 2023"
+    }
+]
+>>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd

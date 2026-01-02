@@ -1,8 +1,15 @@
 [
     {
+<<<<<<< HEAD
         "role": "Web Developer",
         "company": "MNR World",
         "duration": "2025 - Present",
         "description": "Implementing and reviewing web applications to ensure optimal performance and user experience."
+=======
+        "role": "Web Designer",
+        "company": "MNR World",
+        "duration": "2025 - Present",
+        "description": "loading"
+>>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd
     }
 ]

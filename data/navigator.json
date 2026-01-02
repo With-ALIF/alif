@@ -1,5 +1,8 @@
 [
+<<<<<<< HEAD
   { "label": "Home", "link": "#home" },
+=======
+>>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd
   { "label": "About", "link": "#about" },
   { "label": "Education", "link": "#education-section" },
   { "label": "Projects", "link": "#projects-section" },
