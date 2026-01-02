@@ -148,8 +148,8 @@ main {
 .hero {
   min-height: calc(100vh - 5rem);
   display: flex;
-  align-items: center;
-  padding: 4rem 0;
+  align-items: flex-start;
+  padding: 3rem 0;
 }
 
 .hero-content {
@@ -213,5 +213,14 @@ main {
 
   .hero-buttons {
     flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    align-items: flex-start;
   }
 }
