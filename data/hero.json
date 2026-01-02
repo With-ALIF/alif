@@ -5,7 +5,6 @@
   },
   "description": "I design and build modern, scalable and user-focused digital products.",
   "buttons": [
-<<<<<<< HEAD
     {
       "text": "View Projects",
       "link": "#projects-section",
@@ -21,9 +20,5 @@
       "link": "https://drive.google.com/file/d/YOUR_FILE_ID/view",
       "style": "cv"
     }
-=======
-    { "text": "View Projects", "link": "#projects-section", "style": "primary" },
-    { "text": "Contact Me", "link": "#contact", "style": "outline" }
->>>>>>> 8cb5e2677d832d3cf57f10ac961b275a50445dcd
   ]
 }
