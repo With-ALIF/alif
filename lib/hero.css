@@ -120,7 +120,7 @@ a {
     right: 1rem;
     width: 85vw;
     max-width: 320px;
-    max-height: calc(100vh - 6rem);
+    max-height: calc(100svh - 6rem);
     overflow-y: auto;
     background: hsl(20, 14%, 8%);
     border: 1px solid hsl(20, 10%, 18%);
@@ -146,10 +146,16 @@ main {
 }
 
 .hero {
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100svh - 5rem);
   display: flex;
   align-items: flex-start;
   padding: 3rem 0;
+}
+
+@supports not (height: 100svh) {
+  .hero {
+    min-height: calc(100vh - 5rem);
+  }
 }
 
 .hero-content {

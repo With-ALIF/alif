@@ -2,6 +2,7 @@ const loadJSON = path => fetch(path).then(r => r.json())
 
 const projectsContainer = document.getElementById("projectsContainer")
 const skillsContainer = document.getElementById("skillsContainer")
+const toolsContainer = document.getElementById("toolsContainer")
 
 Promise.all([
   loadJSON("data/meta.json"),
@@ -12,8 +13,9 @@ Promise.all([
   loadJSON("data/stats.json"),
   loadJSON("data/education.json"),
   loadJSON("data/experience.json"),
-   loadJSON("data/project.json"),
+  loadJSON("data/project.json"),
   loadJSON("data/skill.json"),
+  loadJSON("data/tools.json"),
   loadJSON("data/contact.json"),
   loadJSON("data/footer.json")
 ]).then(([
@@ -25,8 +27,9 @@ Promise.all([
   statsData,
   educationData,
   experienceData,
-   projectsData,
+  projectsData,
   skillsData,
+  toolsData,
   contactData,
   footerData
 ]) => {
@@ -173,6 +176,25 @@ eduPrev.onclick = () => {
   renderEducation("left");
 };
 
+/*======  tools ========*/
+
+toolsHeader.innerHTML = `
+  <p class="section-label">${toolsData.label}</p>
+  <h2 class="section-title">
+    Tools & <span class="text-gradient">Technologies</span>
+  </h2>
+`
+
+toolsContainer.innerHTML = `
+  <div class="tools-grid">
+    ${toolsData.items.map(tool => `
+      <div class="tool-card">
+        <img src="${tool.icon}" alt="${tool.name}" class="tool-icon" loading="lazy">
+        <span class="tool-name">${tool.name}</span>
+      </div>
+    `).join("")}
+  </div>
+`
 
   /* ================= EXPERIENCE ================= */
   experienceHeader.innerHTML = `
@@ -194,11 +216,6 @@ eduPrev.onclick = () => {
     </div>
   `
 
-  /* ================= TECHNOLOGIES ================= */
-  techTitle.textContent = technologies.label
-  techTags.innerHTML = technologies.items.map(t =>
-    `<span class="tech-tag">${t}</span>`
-  ).join("")
 
   /* ================= PROJECTS ================= */
   projectHeader.innerHTML = `
@@ -229,24 +246,28 @@ eduPrev.onclick = () => {
   `
 
   /* ================= SKILLS ================= */
-  skillsHeader.innerHTML = `
-    <p class="section-label">${skillsData.label}</p>
-    <h2 class="section-title">${skillsData.title}</h2>
-  `
+ skillsHeader.innerHTML = `
+  <h2 class="section-title">${skillsData.title}</h2>
+`
 
-  skillsContainer.innerHTML = `
-    <div class="skills-grid">
-      ${skillsData.items.map(s => `
-        <div class="skill-card">
-          <h3>${s.title}</h3>
-          <p>${s.description}</p>
-          <ul>
-            ${s.points.map(p => `<li>${p}</li>`).join("")}
-          </ul>
+skillsContainer.innerHTML = `
+  <div class="skills-grid">
+    ${skillsData.items.map(skill => `
+      <div class="skill-card">
+        <div class="skill-top">
+          <img class="skill-icon" src="${skill.icon}" alt="${skill.name}">
+          <span class="skill-name">${skill.name}</span>
+          <span class="skill-percent">${skill.level}%</span>
         </div>
-      `).join("")}
-    </div>
-  `
+        <div class="skill-bar">
+          <span style="width:${skill.level}%"></span>
+        </div>
+      </div>
+    `).join("")}
+  </div>
+`
+
+
 
   /* ================= CONTACT ================= */
   contact.innerHTML = `

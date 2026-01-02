@@ -1,26 +1,35 @@
 {
-  "label": "Expertise",
-  "title": "What I <span class='text-gradient'>Bring</span>",
+  "title": "Technical <span class='text-gradient'>Skill</span>",
   "items": [
     {
-      "title": "Frontend Development",
-      "description": "Building responsive and accessible UI.",
-      "points": ["HTML", "CSS", "JavaScript", "React"]
+      "name": "HTML",
+      "icon": "https://github.com/With-ALIF/logo_zone/blob/main/images/html5..png?raw=true",
+      "level": 75
     },
     {
-      "title": "Backend Development",
-      "description": "Developing secure and scalable APIs.",
-      "points": ["Node.js", "Express", "MongoDB"]
+      "name": "CSS",
+      "icon": "https://github.com/With-ALIF/logo_zone/blob/main/images/css3.png?raw=true",
+      "level": 50
     },
     {
-      "title": "UI/UX Design",
-      "description": "Designing intuitive user experiences.",
-      "points": ["Figma", "Wireframing", "Prototyping"]
+      "name": "JavaScript",
+      "icon": "https://github.com/With-ALIF/logo_zone/blob/main/images/JavaScript.png?raw=true",
+      "level": 40
     },
     {
-      "title": "Performance & SEO",
-      "description": "Optimizing speed and search visibility.",
-      "points": ["Optimization", "Accessibility", "SEO"]
+      "name": "C",
+      "icon": "https://github.com/With-ALIF/logo_zone/blob/main/images/c.png?raw=true",
+      "level": 30
+    },
+     {
+      "name": "Python",
+      "icon": "https://github.com/With-ALIF/logo_zone/blob/main/images/python.png?raw=true",
+      "level": 20
+    },
+    {
+      "name": "Typescript",
+      "icon": "https://github.com/With-ALIF/logo_zone/blob/main/images/TypeScript.png?raw=true",
+      "level": 10
     }
   ]
 }
