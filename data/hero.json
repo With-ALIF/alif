@@ -1,0 +1,24 @@
+{
+  "title": {
+    "line1": "Alif",
+    "line2": "Portfolio"
+  },
+  "description": "I design and build modern, scalable and user-focused digital products.",
+  "buttons": [
+    {
+      "text": "View Projects",
+      "link": "#projects-section",
+      "style": "primary"
+    },
+    {
+      "text": "Contact Me",
+      "link": "#contact",
+      "style": "outline"
+    },
+    {
+      "text": "View CV",
+      "link": "https://drive.google.com/file/d/YOUR_FILE_ID/view",
+      "style": "cv"
+    }
+  ]
+}
