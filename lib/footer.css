@@ -1,41 +1,14 @@
-.contact-section {
-  padding: 5rem 1.5rem;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contact-section p {
-  color: hsl(40, 15%, 85%);
-  font-size: 0.95rem;
-  margin-bottom: 0.6rem;
-  line-height: 1.6;
-}
-
-.contact-section .section-label {
-  font-size: 0.8rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: hsl(40, 10%, 65%);
-  margin-bottom: 0.5rem;
-}
-
-.contact-section .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
 .footer {
-  border-top: 1px solid hsl(20, 10%, 18%);
-  padding: 2.5rem 1.5rem;
+  margin-top: 0;
+  padding: 2.8rem 1.5rem 2.5rem;
   text-align: center;
   background: hsl(20, 14%, 6%);
+  border-top: 1px solid rgba(245, 185, 66, 0.15);
 }
 
 .footer .logo {
   margin-bottom: 0.8rem;
+  display: inline-block;
 }
 
 .footer-text {
@@ -43,16 +16,15 @@
   color: hsl(40, 10%, 70%);
 }
 
+/* Safety: no overlap with previous section */
+.footer,
+.contact-section {
+  clear: both;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .contact-section {
-    padding: 4rem 1.2rem;
-  }
-
-  .contact-section .section-title {
-    font-size: 1.6rem;
-  }
-
   .footer {
-    padding: 2rem 1.2rem;
+    padding: 2.2rem 1.2rem 2rem;
   }
 }

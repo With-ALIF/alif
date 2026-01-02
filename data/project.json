@@ -5,17 +5,17 @@
       "title": "Portfolio Website",
       "description": "A modern responsive portfolio built with clean UI and animations.",
       "tags": ["HTML", "CSS", "JavaScript"],
-      "image": "https://github.com/With-ALIF/logo_zone/blob/main/alif/alif.jpg?raw=true",
-      "github": "#",
-      "demo": "#"
+      "image": "https://github.com/With-ALIF/logo_zone/blob/main/project/protfolio.png?raw=true",
+      "github": "https://github.com/With-ALIF/alif_protfolio",
+      "demo": "https://alif-protfolio.netlify.app/"
     },
     {
-      "title": "E-commerce Platform",
-      "description": "Full-stack e-commerce application with authentication and payments.",
-      "tags": ["React", "Node.js", "MongoDB"],
-      "image": "https://github.com/With-ALIF/logo_zone/blob/main/alif/alif.jpg?raw=true",
-      "github": "#",
-      "demo": "#"
+      "title": "Alif Tools",
+      "description": "ALIF Tools is a modern, fast, and privacy-focused online platform for processing PDF and image files with ease.\nIt is designed to be simple, secure, and completely free for everyone.",
+      "tags": ["Typescript", "HTML"],
+      "image": "https://github.com/With-ALIF/logo_zone/blob/main/project/alif-tools.png?raw=true",
+      "github": "https://github.com/With-ALIF/alif-tools",
+      "demo": "https://alif-tools.vercel.app/"
     }
   ]
 }

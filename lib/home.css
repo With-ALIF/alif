@@ -1,7 +1,3 @@
- 
-
-/* ===== View Projects ===== */
-
 .btn-primary {
   background: linear-gradient(135deg, #ffb703, #ff8c00);
   color: #111;
@@ -14,8 +10,6 @@
   box-shadow: 0 14px 35px rgba(255, 183, 3, 0.5);
 }
 
-/* ===== Contact Me ===== */
-
 .btn-outline {
   background: transparent;
   color: #ffb703;
@@ -26,8 +20,6 @@
   background: rgba(255, 183, 3, 0.12);
   transform: translateY(-2px);
 }
-
-/* ===== View CV ===== */
 
 .btn-cv {
   background: rgba(255, 183, 3, 0.08);
@@ -42,11 +34,8 @@
   box-shadow: 0 12px 30px rgba(255, 183, 3, 0.45);
 }
 
-/* ================= MOBILE ================= */
-
 @media (max-width: 767px) {
 
-  /* allow title wrap on mobile */
   .hero-title {
     white-space: normal;
   }
@@ -61,8 +50,6 @@
   }
 }
 
-/* ================= DESKTOP ================= */
-
 @media (min-width: 1024px) {
   .hero {
     min-height: auto;
@@ -74,15 +61,10 @@
   }
 }
 
-/* =========================================================
-   ABOUT ME
-========================================================= */
-
 #about {
   padding: 4rem 0;
 }
 
-/* About label (About Me) */
 #about .section-label {
   font-size: 1.4rem;
   font-weight: 600;
@@ -92,7 +74,6 @@
   margin-bottom: 1rem;
 }
 
-/* About title */
 #about .section-title {
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(2rem, 4.5vw, 2.8rem);
@@ -100,7 +81,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* About paragraphs */
 #about .about-text {
   max-width: 700px;
   font-size: 1.05rem;
@@ -109,7 +89,6 @@
   margin-bottom: 1rem;
 }
 
-/* Desktop spacing */
 @media (min-width: 1024px) {
   #about {
     padding: 5rem 0;
@@ -119,8 +98,6 @@
     font-size: 1.1rem;
   }
 }
-
-/* Mobile optimization */
 @media (max-width: 767px) {
   #about .section-label {
     font-size: 1.15rem;
@@ -130,5 +107,3 @@
     font-size: 1rem;
   }
 }
-
- 
