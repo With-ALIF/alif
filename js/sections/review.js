@@ -41,16 +41,28 @@ export function renderReview(reviewData) {
     </div>
   `;
 
-  /* ===== Dot Sync Logic ===== */
   const grid = document.getElementById("reviewGrid");
   const dots = document.querySelectorAll("#reviewDots .dot");
 
-  if (!grid || !dots.length) return;
+  const originals = Array.from(grid.children);
+  const count = originals.length;
+
+  originals.forEach(item => grid.appendChild(item.cloneNode(true)));
+  originals.forEach(item => grid.insertBefore(item.cloneNode(true), grid.firstChild));
+
+  const cardWidth = originals[0].offsetWidth;
+  grid.scrollLeft = cardWidth * count;
 
   grid.addEventListener("scroll", () => {
-    const cardWidth = grid.firstElementChild.offsetWidth;
-    const index = Math.round(grid.scrollLeft / cardWidth);
+    const maxScroll = cardWidth * count * 2;
+    if (grid.scrollLeft <= cardWidth) {
+      grid.scrollLeft += cardWidth * count;
+    }
+    if (grid.scrollLeft >= maxScroll) {
+      grid.scrollLeft -= cardWidth * count;
+    }
 
+    const index = Math.round(grid.scrollLeft / cardWidth) % count;
     dots.forEach(dot => dot.classList.remove("active"));
     dots[index]?.classList.add("active");
   });
