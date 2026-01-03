@@ -11,20 +11,24 @@ export function renderReview(reviewData) {
 
   reviewHeader.innerHTML = `
     <span class="review-label">TESTIMONIALS</span>
-  `;
+   `;
 
   reviewContainer.innerHTML = `
-    <div class="review-inner">
-      <div class="review-quote">“</div>
+    <div class="review-grid">
+      ${reviewData.items.map(item => `
+        <div class="review-inner">
+          <div class="review-quote">“</div>
 
-      <p class="review-text">
-        ${reviewData.items[0].comment}
-      </p>
+          <p class="review-text">
+            ${item.comment}
+          </p>
 
-      <div class="review-author">
-        <img src="${reviewData.items[0].image}" alt="${reviewData.items[0].name}" loading="lazy">
-        <h4>${reviewData.items[0].name}</h4>
-      </div>
+          <div class="review-author">
+            <img src="${item.image}" alt="${item.name}" loading="lazy">
+            <h4>${item.name}</h4>
+          </div>
+        </div>
+      `).join("")}
     </div>
   `;
 }
