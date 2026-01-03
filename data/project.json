@@ -21,7 +21,7 @@
       "title": "BG Remover",
       "description": "Background Remover is a tool to remove backgrounds from images easily and quickly.\nIt is designed to be simple, secure, and completely free for everyone.",
       "tags": ["Typescript", "HTML"],
-      "image": "https://github.com/With-ALIF/logo_zone/blob/main/project/bg-remover.png?raw=true",
+      "image": "https://github.com/With-ALIF/logo_zone/blob/main/project/remove-bg.png?raw=true",
       "github": "https://github.com/With-ALIF/remove-background",
       "demo": "https://remove-background-free.vercel.app/"
     },

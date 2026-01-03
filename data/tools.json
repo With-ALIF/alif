@@ -1,6 +1,4 @@
 {
-  "label": "Tools",
-  "title": "Tools & Technologies",
   "items": [
     {
       "name": "GitHub",
@@ -9,6 +7,10 @@
     {
       "name": "VS Code",
       "icon": "https://github.com/With-ALIF/logo_zone/blob/main/images/VS%20Code.png?raw=true"
+    },
+    {
+      "name": "Git",
+      "icon": "https://github.com/With-ALIF/logo_zone/blob/main/images/Git_icon.svg.png?raw=true"
     },
     {
       "name": "Vercel",

@@ -170,3 +170,20 @@
     font-size: 1.25rem;
   }
 }
+
+@media (max-width: 767px) {
+  .project-search-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .project-search-wrapper label {
+    font-size: 16px;
+  }
+
+  #projectSearch {
+    width: 100%;
+  }
+}

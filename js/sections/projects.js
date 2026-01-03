@@ -1,32 +1,45 @@
-const searchInput = document.getElementById("projectSearch");
-export function renderProjects(projectsData) {
+const projectHeader = document.getElementById("projectHeader");
+const projectsContainer = document.getElementById("projectsContainer");
 
+export function renderProjects(projectsData) {
+  projectHeader.innerHTML = "";
+
+  const title = document.createElement("h2");
+  title.className = "section-title";
+  title.innerHTML = projectsData.title;
+
+  const searchWrapper = document.createElement("div");
+  searchWrapper.className = "project-search-wrapper";
+
+  const label = document.createElement("label");
+  label.setAttribute("for", "projectSearch");
+  label.textContent = "Search project by tag";
+
+  const input = document.createElement("input");
+  input.id = "projectSearch";
+  input.placeholder = "HTML, CSS....";
+
+  searchWrapper.appendChild(label);
+  searchWrapper.appendChild(input);
+
+  projectHeader.appendChild(title);
+  projectHeader.appendChild(searchWrapper);
 
   drawProjects(projectsData.items);
 
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      const value = e.target.value.toLowerCase();
-
-      const filteredItems = projectsData.items.filter(p =>
-        p.tags.some(tag =>
-          tag.toLowerCase().includes(value)
-        )
-      );
-
-      drawProjects(filteredItems);
-    });
-  }
+  input.addEventListener("input", () => {
+    const value = input.value.toLowerCase();
+    const filtered = projectsData.items.filter(p =>
+      p.tags.some(tag => tag.toLowerCase().includes(value))
+    );
+    drawProjects(filtered);
+  });
 
   function drawProjects(items) {
-    projectHeader.innerHTML = `
-      <h2 class="section-title">${projectsData.title}</h2>
-    `;
-
     projectsContainer.innerHTML = `
       <div class="projects-grid">
         ${
-          items.length > 0
+          items.length
             ? items.map(p => `
               <div class="project-card">
                 <div class="project-image">
