@@ -42,6 +42,14 @@
       "demo": "https://admission-study.netlify.app/"
     },
     {
+      "title": "E - Commerce Website",
+      "description": " E-Commerce Website is a modern and responsive online store built with HTML and CSS. It features a clean UI design and smooth animations to enhance user experience",
+      "tags": ["HTML", "CSS"],
+      "image": "https://github.com/With-ALIF/E-Commerce/blob/main/picture/e-comerce.png?raw=true",
+      "github": "https://github.com/With-ALIF/E-Commerce",
+      "demo": "https://with-alif.github.io/E-Commerce/"
+    },
+    {
       "title": "Password Generator",
       "description": "Password Generator is a tool to generate strong and secure passwords with customizable options.",
       "tags": ["HTML", "JavaScript"],
