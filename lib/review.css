@@ -126,3 +126,27 @@
     height: 52px;
   }
 }
+
+.review-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.review-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: hsl(40, 10%, 40%);
+}
+
+.review-dots .dot.active {
+  background: hsl(40, 80%, 55%);
+}
+
+@media (max-width: 768px) {
+  .review-dots {
+    display: flex;
+  }
+}
