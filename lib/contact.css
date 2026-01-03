@@ -172,3 +172,13 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 768px) {
+  .contact-socials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    justify-items: center;
+    overflow: visible;
+  }
+}
