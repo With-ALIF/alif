@@ -11,7 +11,7 @@ export function renderTools(toolsData) {
 
   toolsHeader.innerHTML = `
      <h2 class="section-title">
-      Tools & <span class="text-gradient">Technologies</span>
+      <span class="text-gradient">Technologies</span>
     </h2>
   `;
 
