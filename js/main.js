@@ -26,7 +26,7 @@ Promise.all([
   loadJSON("data/project.json"),
   loadJSON("data/skill.json"),
   loadJSON("data/tools.json"),
-  loadJSON("data/review.json"),   // ✅ Review added
+  loadJSON("data/review.json"),   
   loadJSON("data/contact.json"),
   loadJSON("data/footer.json")
 ]).then(([
@@ -55,7 +55,7 @@ Promise.all([
   renderExperience(experience)
   renderProjects(projects)
   renderSkills(skills)
-  renderReview(reviews)           // ✅ Review render
+  renderReview(reviews)           
   renderContact(contact)
   renderFooter(logo, footer)
 }).catch(error => {

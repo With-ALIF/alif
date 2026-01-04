@@ -1,5 +1,3 @@
-// service/service.js
-
 async function loadService() {
   try {
     const res = await fetch("./service/service.json");

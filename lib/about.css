@@ -1,10 +1,9 @@
-
 #about {
   padding: 4rem 0;
 }
 
 #about .section-label {
-  font-size: 1.4rem;
+  font-size: 2.8rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -82,7 +81,8 @@
 
 @media (max-width: 767px) {
   #about .section-label {
-    font-size: 1.15rem;
+    font-size: 2.5rem;
+    font-weight: 875;
   }
 
   #about .about-text {
