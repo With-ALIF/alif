@@ -8,7 +8,7 @@ export function renderReview(reviewData) {
   }
  
   reviewHeader.innerHTML = `
-    <span class="review-label">Testimonials</span>
+    <h2 class="section-title">Test<span class="text-gradient">imonials</span></h2>
   `;
 
  

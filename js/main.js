@@ -13,6 +13,7 @@ import { renderSkills } from "./sections/skills.js"
 import { renderReview } from "./sections/review.js"
 import { renderContact } from "./sections/contact.js"
 import { renderFooter } from "./sections/footer.js"
+import { renderWorkflow } from "./sections/workflow.js"
 
 Promise.all([
   loadJSON("data/meta.json"),
@@ -26,9 +27,10 @@ Promise.all([
   loadJSON("data/project.json"),
   loadJSON("data/skill.json"),
   loadJSON("data/tools.json"),
-  loadJSON("data/review.json"),   
+  loadJSON("data/review.json"),
   loadJSON("data/contact.json"),
-  loadJSON("data/footer.json")
+  loadJSON("data/footer.json"),
+  loadJSON("data/workflow.json")
 ]).then(([
   meta,
   logo,
@@ -43,7 +45,8 @@ Promise.all([
   tools,
   reviews,
   contact,
-  footer
+  footer,
+  workflow
 ]) => {
   renderMeta(meta)
   renderHeader(logo, nav)
@@ -55,9 +58,10 @@ Promise.all([
   renderExperience(experience)
   renderProjects(projects)
   renderSkills(skills)
-  renderReview(reviews)           
+  renderReview(reviews)
   renderContact(contact)
   renderFooter(logo, footer)
+  renderWorkflow(workflow)
 }).catch(error => {
   console.error("Data loading error:", error)
 })

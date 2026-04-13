@@ -5,9 +5,7 @@ export function renderContact(contactData) {
   const { email, location, socials } = contactData.details;
 
   contact.innerHTML = `
-    <p class="section-label">${contactData.label}</p>
     <h2 class="section-title">${contactData.title}</h2>
-    <p class="contact-description">${contactData.description}</p>
 
     <div class="contact-cards">
       <div class="contact-card">
