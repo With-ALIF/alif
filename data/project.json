@@ -26,28 +26,12 @@
       "demo": "https://remove-background-free.vercel.app/"
     },
     {
-      "title": "Shop Management System",
-      "description": "Shop Management System is a web application designed to streamline the management of retail operations.\nIt provides an efficient way to handle inventory, sales, and customer management.",
-      "tags": ["HTML", "Typescript"],
-      "image": "https://i.postimg.cc/XvC4q340/shop.png",
-      "github": "https://github.com/With-ALIF/shop-management-system",
-      "demo": "https://shop-management-system-nu.vercel.app/"
-    },
-    {
-      "title": "Admission Tool Hub",
-      "description": "Admission Tools Hub is a comprehensive web platform that centralizes all essential tools for university admissions. It offers a variety of features to assist students in managing their application process efficiently.",
-      "tags": ["HTML", "JavaScript"],
-      "image": "https://github.com/With-ALIF/logo_zone/blob/main/project/admission-tool.png?raw=true",
-      "github": "https://github.com/With-ALIF/Admission-Journey",
-      "demo": "https://admission-study.netlify.app/"
-    },
-    {
       "title": "Tutor Flow",
       "description": "Tutor Flow is an interactive platform that connects tutors with students, providing structured learning paths and session management.",
       "tags": ["HTML", "Typescript"],
       "image": "https://github.com/alif982/picture/blob/main/New%20folder/tutorflow.webp?raw=true",
       "github": "https://github.com/With-ALIF/tutorflow",
-      "demo": "https://tutorflowbd.vercel.app/"
+      "demo": "https://tuition.mnr.bd/"
     },
     {
       "title": "Password Generator",
@@ -57,29 +41,13 @@
       "github": "https://github.com/With-ALIF/password_generator",
       "demo": "https://with-alif.github.io/password_generator/"
     },
-   {
-      "title": "Vehicle Management Dashboard",
-      "description": "Vehicle Management Dashboard is a web application that provides a centralized platform for managing vehicle information, tracking maintenance schedules, and monitoring vehicle performance.",
-      "tags": ["Typescript", "HTML"],
-      "image": "https://github.com/With-ALIF/logo_zone/blob/main/project/vehicle.png?raw=true",
-      "github": "https://github.com/With-ALIF/vehicle-management-dashboard",
-      "demo": "https://vehicle-management-dashboard.vercel.app/"
-    },
      {
       "title": "Web Poll",
       "description": "Web Poll is a web-based polling application that allows users to create and participate in online polls.",
       "tags": ["HTML", "JavaScript"],
       "image": "https://github.com/alif982/picture/blob/main/New%20folder/web-poll.webp?raw=true",
       "github": "https://github.com/With-ALIF/Web_Poll",
-      "demo": "https://web-poll-bd.vercel.app/"
-    },
-     {
-      "title": "Cash Book System",
-      "description": "Cash Book is a modern, mobile-friendly web app that lets you easily manage your daily expenses, budget and multiple wallets (Bank / Bikash / Cash etc.).",
-      "tags": ["Typescript", "HTML"],
-      "image": "https://github.com/With-ALIF/logo_zone/blob/main/project/cash.png?raw=true",
-      "github": "https://github.com/With-ALIF/cash-book",
-      "demo": "https://ecashbook.netlify.app/"
+      "demo": "https://poll.mnr.bd/"
     }
   ]
 }
